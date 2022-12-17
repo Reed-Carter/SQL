@@ -6,7 +6,6 @@
 
 ## Technologies Used
 
-* Python
 * MySQL
 * GitHub
 * Jupyterlab
