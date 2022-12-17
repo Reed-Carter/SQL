@@ -17,3 +17,9 @@ SELECT part_num FROM parts where part_cat_id IN (SELECT theme_id FROM sets WHERE
 SELECT SUM(part_num) FROM parts where part_cat_id IN (SELECT theme_id FROM sets WHERE year > 1999); --3049309347.7599983 parts
 SELECT AVG(part_num) FROM parts where part_cat_id IN (SELECT theme_id FROM sets WHERE year > 1999); --163897.30436764302 parts
 SELECT theme_id, AVG(num_parts) FROM sets GROUP BY theme_id;
+
+--Joins
+Select p.part_num, p.name AS part_name, p.part_cat_id, pc.id AS part_cat_id, pc.name AS part_cat_id FROM parts AS p
+JOIN part_categories AS pc
+ON p.part_cat_id = pc.id
+WHERE p.name LIKE '%Werewolf%';
